@@ -11,7 +11,6 @@ smallest_file = None
 
 # loop through all files in the folder
 for file in os.listdir(path):
-    # check if file is a .jpeg
     if file.endswith(".jpg"):
         # get file size
         size = os.path.getsize(os.path.join(path, file))

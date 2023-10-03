@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-prompt = input("Enter the prompt: ")
-file_name = input("Enter the file name to save the script: ")
+prompt = input("What script do you need: ")
+file_name = input("Enter the file name to save the script (don't forget the .py at the end): ")
 
 api_endpoint = "https://api.openai.com/v1/completions"
 api_key = os.getenv("OPENAI_API_KEY")
@@ -17,10 +17,10 @@ request_headers = {
 }
 
 request_data = {
-    "model": "gpt-3.5-turbo-instruct",
-    "prompt": f"Write python script to {prompt}. Provide only code, no text.",
+    "model": "text-davinci-003",
+    "prompt": f"You are a python developer with 20 years of experience. Write a python script to {prompt}. Provide only code, no text.",
     "max_tokens": 1000,
-    "temperature": 0.5
+    "temperature": 0.7
 
 }
 
