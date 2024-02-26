@@ -2,7 +2,7 @@ import PyPDF2
 import re
 
 # Open the PDF file in read-binary mode
-with open("/home/lilli/Documents/Anschreiben/Anschreiben-ZARA_29032023.pdf", "rb") as file:
+with open("/home/user/Documents/test.pdf", "rb") as file:
     # Create a PDF object using PdfReader
     pdf = PyPDF2.PdfReader(file)
 
@@ -14,7 +14,7 @@ with open("/home/lilli/Documents/Anschreiben/Anschreiben-ZARA_29032023.pdf", "rb
         text += page.extract_text()
 
 # Use regular expression to find all occurrences of "ich"
-matches = re.findall("ich", text)
+matches = re.findall("test", text)
 
 # Print the number of occurrences found
-print("Found", len(matches), "occurrences of 'ich' in the PDF file")
+print("Found", len(matches), "occurrences of 'test' in the PDF file")

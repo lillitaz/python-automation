@@ -2,8 +2,8 @@
 
 import os
 
-# set path to Pictures folder
-path = "/home/lilli/Pictures/Screenshots"
+# set path to Pictures folder, whatever folder you like with pictures in it
+path = "/home/user/Pictures/Screenshots" 
 
 # initialize variables for smallest file size and file name
 smallest_size = None
